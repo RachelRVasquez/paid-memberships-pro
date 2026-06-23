@@ -247,3 +247,21 @@ function pmpro_liquid_autocomplete_tinymce_external_plugins( $external_plugins, 
 	return $external_plugins;
 }
 add_filter( 'mce_external_plugins', 'pmpro_liquid_autocomplete_tinymce_external_plugins', 10, 2 );
+
+function pmpro_register_memberlite_block_styles(): void {
+	if ( get_template() !== 'memberlite' ) {
+		return;
+	}
+
+	$block_styles_path = plugins_url( 'css/block-styles.css', dirname(__FILE__) );
+
+	wp_register_style(
+		'pmpro-block-styles',
+		$block_styles_path,
+		array(),
+		PMPRO_VERSION
+	);
+
+	add_editor_style( $block_styles_path ); // for the editor
+}
+add_action( 'init', 'pmpro_register_memberlite_block_styles' );

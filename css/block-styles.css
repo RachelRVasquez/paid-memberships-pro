@@ -1,0 +1,23 @@
+/* Still duplicates but it's all managed in the plugin versus across the plugin and Memberlite theme */
+
+/* pmpro variables undefined in the editor... */
+
+.is-style-pmpro-card-variation-1,
+.is-style-pmpro-card-high-contrast {
+	background-color: #fff;
+	display: flex;
+	flex-direction: column;
+	/*margin: var(--pmpro--base--spacing--medium) 0;*/
+	overflow: hidden;
+}
+
+.is-style-pmpro-card-variation-1 {
+	border: 1px solid hsl( 0,0%,91% );
+	border-radius: 8px;
+	box-shadow: 2px 2px 7px rgba( 0, 0, 0, 0.07 );
+}
+
+.is-style-pmpro-card-high-contrast {
+	border: 1px solid hsl( 0,0%,0% );
+	box-shadow: 5px 4px 0 #222;
+}
